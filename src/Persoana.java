@@ -8,6 +8,7 @@ public class Persoana {
      private String prenume;   //string
      private LocalDateTime dataNasterii;   //obiect
      private ArrayList<String> adrese;     //obiect
+     private Firma angajator;    //obiect de tip firma, datele angajatorului
 
      // getters and setters
      public long getId() {
@@ -54,21 +55,32 @@ public class Persoana {
           this.adrese.add(adresaNoua);
      }
 
+     public Firma getAngajator() {
+          return angajator;
+     }
+
+     public void setAngajator(Firma angajator) {
+          this.angajator = angajator;
+     }
+
      //constructor default
      public Persoana() {
           id = 0;
           nume = prenume = null;
           dataNasterii = null;
           adrese = new ArrayList<String>();
+          angajator = null;
      }
 
      //constructor pentru toate atributele
-     public Persoana(long id, String nume, String prenume, LocalDateTime dataNasterii, ArrayList<String> adrese) {
+     public Persoana(long id, String nume, String prenume, LocalDateTime dataNasterii, ArrayList<String> adrese
+             , Firma angajator) {
           this.id = id;
           this.nume = nume;
           this.prenume = prenume;
           this.dataNasterii = dataNasterii;
           this.adrese = adrese;
+          this.angajator = angajator;
      }
 
      //toString() suprascris
@@ -80,6 +92,7 @@ public class Persoana {
                   ", prenume='" + prenume + '\'' +
                   ", dataNasterii=" + dataNasterii +
                   ", adrese=" + adrese +
+                  ", angajator=" + angajator +
                   '}';
      }
 }

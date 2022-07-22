@@ -17,8 +17,8 @@ public class Utilizator extends Persoana{
 
     //constructor cu parametrii vechi plus cei noi
     public Utilizator(long id, String nume, String prenume, LocalDateTime dataNasterii, ArrayList<String> adrese
-            , String email, String parola, LocalDateTime dataInregistrarii) {
-        super(id, nume, prenume, dataNasterii, adrese);   //apeleaza construcotrul clasei de baza
+            , String email, String parola, LocalDateTime dataInregistrarii, Firma firma) {
+        super(id, nume, prenume, dataNasterii, adrese, firma);   //apeleaza construcotrul clasei de baza
         this.email = email;  //pe cele noi le seteaza
         this.parola = parola;
         this.dataInregistrarii = dataInregistrarii;
